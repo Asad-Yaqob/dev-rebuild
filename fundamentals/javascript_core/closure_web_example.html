@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Closure Example</title>
+    <style>
+        body {  background-color: #333; }
+    </style>
+</head>
+<body>
+    <button id="orange">Orange</button>
+    <button id="pink">Pink</button>
+    
+    <script>
+        let changeColor = function (color){
+            return function(){
+                document.body.style.backgroundColor = `${color}`;
+            }
+        }
+
+        document.getElementById("orange").onclick = changeColor("orange");
+
+        document.getElementById("pink").onclick = changeColor("pink");
+
+       
+    </script>
+</body>
+</html>

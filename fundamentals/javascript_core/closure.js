@@ -16,22 +16,23 @@
 
 // Code Examples. 
 
-//1. Laxical Scoping. 
+//1. Laxical Scoping Example.
+// Example 1: 
 
-// function myFunc(){
-//     let name = "Asad";
+function myFunc(){
+    let name = "Asad";
 
-//     function innerFunc(){
-//         console.log(name);
-//     }
+    function innerFunc(){
+        console.log(name);
+    }
     
-//     innerFunc();
-// }
+    innerFunc();
+}
 
-// myFunc();
+myFunc();
 
-//2. Closure
-// basic example of closure is a function that returns another function.
+//2. Closure Examples
+// Example 1: basic example of closure is a function that returns another function.
 
 function makeFunc() {
   const name = "Mozilla";
@@ -46,22 +47,22 @@ function makeFunc() {
 const myFunc = makeFunc();
 myFunc();
 
-// example — function factory:
+// Example 2: function factory example that adds two variables.
 
-// function makeAdder(x){
+function makeAdder(x){
 
-//     return function(y){
-//         return x+y;
-//     }
-// }
+    return function(y){
+        return x+y;
+    }
+}
 
-// const add5 = makeAdder(5);
-// const add10 = makeAdder(10);
+const add5 = makeAdder(5);
+const add10 = makeAdder(10);
 
-// console.log(add5(2));  // 7
-// console.log(add10(2)); // 12
+console.log(add5(2));  // 7
+console.log(add10(2)); // 12
 
-// function factory good example. 
+// Example 3: function factory tax calculator example. 
 // You configure pakistanTax once, then use it everywhere in your app without re-passing the tax rate every single time. 
 // That's the real value — not doing math, but creating specialized, reusable functions from a general one.
 
@@ -76,3 +77,24 @@ const dubaiTax = makeTaxCalculator(0.05);
 
 console.log(pakistanTax(1000)); // 1170
 console.log(dubaiTax(1000));    // 1050
+
+// Example 4: Data encapsulation example, creating a private variable count that its value can only increment by increment function. 
+
+function counter(){
+
+    let count = 0; 
+
+    return function increment(){
+      count++;
+      return count;
+    }
+}
+
+const myCounter = counter();
+const myCounter2 = counter();
+console.log(myCounter()); // 1
+console.log(myCounter()); // 2
+console.log(myCounter()); // 3
+console.log(myCounter2()); // 1  
+console.log(myCounter2()); // 2  
+console.log(myCounter2()); // 3  
