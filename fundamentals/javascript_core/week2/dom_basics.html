@@ -1,0 +1,170 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Todo List</title>
+    <style>
+      * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+      }
+
+      body {
+        background-color: #e8e8e8;
+        font-family: Arial, sans-serif;
+        display: flex;
+        justify-content: center;
+        padding: 40px 20px;
+      }
+
+      .container {
+        width: 100%;
+        max-width: 500px;
+        background-color: #ffffff;
+        border: 1px solid #ccc;
+        border-radius: 6px;
+        padding: 30px;
+      }
+
+      h1 {
+        text-align: center;
+        margin-bottom: 20px;
+      }
+
+      .fieldGroup {
+        display: flex;
+        gap: 8px;
+        margin-bottom: 20px;
+      }
+
+      .fieldGroup input {
+        flex: 1;
+        padding: 10px;
+        border: 1px solid #ccc;
+        border-radius: 4px;
+        font-size: 14px;
+      }
+
+      #add {
+        padding: 10px 16px;
+        border: none;
+        border-radius: 4px;
+        background-color: #2f6f5e;
+        color: #fff;
+        font-size: 14px;
+        cursor: pointer;
+      }
+
+      #add:hover {
+        background-color: #26594b;
+      }
+
+      #todolistItems {
+        list-style: none;
+      }
+
+      .listItem {
+        display: flex;
+        align-items: center;
+        gap: 10px;
+        padding: 10px 0px;
+        border-bottom: 1px solid #eee;
+      }
+
+      .todoText {
+        flex: 1;
+      }
+
+      .checked .todoText {
+        text-decoration: line-through;
+        color: #888;
+      }
+
+      .deleteBtn {
+        padding: 5px 10px;
+        border: 1px solid #b0473e;
+        border-radius: 4px;
+        background-color: #fff;
+        color: #b0473e;
+        cursor: pointer;
+      }
+
+      .deleteBtn:hover {
+        background-color: #b0473e;
+        color: #fff;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="container">
+      <h1>Todo List</h1>
+
+      <div class="fieldGroup">
+        <input
+          type="text"
+          id="todoInput"
+          name="todoInput"
+          placeholder="What is the next task?"
+        />
+        <button id="add">Add</button>
+      </div>
+
+      <ul id="todolistItems"></ul>
+    </div>
+
+    <script>
+      const addButton = document.getElementById("add");
+      const todoList = document.getElementById("todolistItems");
+      let userInput = document.getElementById("todoInput");
+
+      function addTodo() {
+        if (userInput.value.trim() === "") {
+          return;
+        }
+
+        const listItem = document.createElement("li");
+        const deleteButton = document.createElement("button");
+        const checkbox = document.createElement("input");
+        const todoText = document.createElement("span");
+        checkbox.type = "checkbox";
+
+        todoText.textContent = userInput.value;
+        todoText.classList.add("todoText");
+
+        listItem.classList.add("listItem");
+        deleteButton.classList.add("deleteBtn");
+        deleteButton.textContent = "Delete";
+
+        checkbox.classList.add("checkbox");
+
+        listItem.appendChild(checkbox);
+        listItem.appendChild(todoText);
+        listItem.appendChild(deleteButton);
+
+        todoList.appendChild(listItem);
+        userInput.value = "";
+      }
+
+      addButton.addEventListener("click", addTodo);
+      document
+        .getElementById("todolistItems")
+        .addEventListener("click", function (event) {
+          if (event.target.classList.contains("deleteBtn")) {
+            event.target.parentElement.remove();
+          }
+
+          if (event.target.classList.contains("checkbox")) {
+            event.target.parentElement.classList.toggle("checked");
+          }
+        });
+
+      userInput.addEventListener("keypress", function (event) {
+        if (event.key === "Enter") {
+          addTodo();
+        }
+      });
+    </script>
+  </body>
+</html>

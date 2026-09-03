@@ -127,7 +127,7 @@ function getTopper(students) {
 }
 const topper = getTopper(students);
 
-console.log(topper);
+// console.log(topper);
 
 // Task# 5: Solution.
 function didEveryonePass(students) {
