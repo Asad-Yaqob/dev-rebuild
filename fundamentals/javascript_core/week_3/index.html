@@ -3,31 +3,58 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Figma Clone - Part 1</title>
+    <title>Figma Clone Part 1</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="style.css" />
   </head>
   <body>
+    
     <header>
-      <nav>
-        <div class="logo">
-          <img src="./assets/logo/Logo.png" alt="logo" />
+      <nav class="nav-container">
+        <div class="nav-logo">
+          <img
+            src="./assets/logo/Logo.png"
+            width="111"
+            height="21"
+            alt="Nexcent logo"
+          />
         </div>
+
         <div class="right_menu">
           <ul>
-            <li>Home</li>
-            <li>Features</li>
-            <li>Community</li>
-            <li>Blog</li>
-            <li>Pricing</li>
+            <li><a href="#">Home</a></li>
+            <li><a href="#">Features</a></li>
+            <li><a href="#">Community</a></li>
+            <li><a href="#">Blog</a></li>
+            <li><a href="#">Pricing</a></li>
           </ul>
-          <div class="button">
-            <button>Register Now</button>
-            <img src="./assets/icons/Down.png" alt="" />
-          </div>
+          <button class="btn-primary">
+            Register Now
+            <svg
+              class="icon-arrow icon-arrow--sm"
+              viewBox="0 0 16 16"
+              fill="none"
+              aria-hidden="true"
+            >
+              <path
+                d="M3 8h10M10 5l3 3-3 3"
+                stroke="currentColor"
+                stroke-width="1.5"
+                stroke-linecap="round"
+                stroke-linejoin="round"
+              />
+            </svg>
+          </button>
         </div>
       </nav>
     </header>
 
     <main>
+      
       <section class="home">
         <section class="hero">
           <div class="hero_container">
@@ -40,11 +67,16 @@
                 Where to grow your business as a photographer: site or social
                 media?
               </p>
-              <button>Register</button>
+              <button class="btn-primary">Register</button>
             </div>
             <div class="hero_image">
-              <img src="./assets/images/hero.png" alt="hero_image" />
+              <img src="./assets/images/hero.png" alt="Hero illustration" />
             </div>
+          </div>
+          <div class="hero_dots" aria-label="Carousel indicators">
+            <span class="dot active"></span>
+            <span class="dot"></span>
+            <span class="dot"></span>
           </div>
         </section>
 
@@ -55,13 +87,13 @@
               <p>We have been working with some Fortune 500+ clients</p>
             </div>
             <div class="clients_icons">
-              <img src="./assets/logo/client_logo1.png" alt="client_logo1" />
-              <img src="./assets/logo/client_logo2.png" alt="client_logo2" />
-              <img src="./assets/logo/client_logo3.png" alt="client_logo3" />
-              <img src="./assets/logo/client_logo4.png" alt="client_logo4" />
-              <img src="./assets/logo/client_logo5.png" alt="client_logo5" />
-              <img src="./assets/logo/client_logo6.png" alt="client_logo6" />
-              <img src="./assets/logo/client_logo7.png" alt="client_logo7" />
+              <img src="./assets/logo/client_logo1.png" alt="Client logo 1" />
+              <img src="./assets/logo/client_logo2.png" alt="Client logo 2" />
+              <img src="./assets/logo/client_logo3.png" alt="Client logo 3" />
+              <img src="./assets/logo/client_logo4.png" alt="Client logo 4" />
+              <img src="./assets/logo/client_logo5.png" alt="Client logo 5" />
+              <img src="./assets/logo/client_logo6.png" alt="Client logo 6" />
+              <img src="./assets/logo/client_logo7.png" alt="Client logo 7" />
             </div>
           </div>
         </section>
@@ -77,7 +109,7 @@
                 <div class="member">
                   <img
                     src="./assets/icons/community_icon1.png"
-                    alt="community_icon1"
+                    alt="Membership icon"
                   />
                   <h3>Membership Organisations</h3>
                 </div>
@@ -90,7 +122,7 @@
                 <div class="member">
                   <img
                     src="./assets/icons/community_icon2.png"
-                    alt="community_icon2"
+                    alt="Associations icon"
                   />
                   <h3>National Associations</h3>
                 </div>
@@ -103,7 +135,7 @@
                 <div class="member">
                   <img
                     src="./assets/icons/community_icon3.png"
-                    alt="community_icon3"
+                    alt="Clubs icon"
                   />
                   <h3>Clubs And Groups</h3>
                 </div>
@@ -116,13 +148,14 @@
           </div>
         </section>
       </section>
+
       <section class="body">
         <section class="unlock">
           <div class="unlock_container">
             <div class="unlock_image">
               <img
                 src="./assets/images/unlock.png"
-                alt="unlock_section_image"
+                alt="Unlock section illustration"
               />
             </div>
             <div class="unlock_content">
@@ -135,7 +168,7 @@
                 auctor. Etiam quis massa pulvinar, aliquam quam vitae, tempus
                 sem. Donec elementum pulvinar odio.
               </p>
-              <button>Learn More</button>
+              <button class="btn-primary">Learn More</button>
             </div>
           </div>
         </section>
@@ -149,31 +182,30 @@
               </h2>
               <p>We reached here with our hard work and dedication</p>
             </div>
-
             <div class="achievements_grid">
               <div class="grid_tem">
-                <img src="./assets/icons/Users.png" alt="Users" />
+                <img src="./assets/icons/Users.png" alt="Members" />
                 <div class="count">
                   <h3>2,245,341</h3>
                   <span>Members</span>
                 </div>
               </div>
               <div class="grid_tem">
-                <img src="./assets/icons/Layers.png" alt="Layers" />
+                <img src="./assets/icons/Layers.png" alt="Clubs" />
                 <div class="count">
                   <h3>46,328</h3>
                   <span>Clubs</span>
                 </div>
               </div>
               <div class="grid_tem">
-                <img src="./assets/icons/Users.png" alt="Layers" />
+                <img src="./assets/icons/Users.png" alt="Event bookings" />
                 <div class="count">
                   <h3>828,867</h3>
                   <span>Event Bookings</span>
                 </div>
               </div>
               <div class="grid_tem">
-                <img src="./assets/icons/Layers.png" alt="" />
+                <img src="./assets/icons/Layers.png" alt="Payments" />
                 <div class="count">
                   <h3>1,926,436</h3>
                   <span>Payments</span>
@@ -186,7 +218,7 @@
         <section class="calender">
           <div class="calender_container">
             <div class="calender_image">
-              <img src="./assets/images/calendar.png" alt="calander" />
+              <img src="./assets/images/calendar.png" alt="Calendar illustration" />
             </div>
             <div class="calender_content">
               <h2>How to design your site footer like we did</h2>
@@ -201,7 +233,7 @@
                 Praesent felis est, finibus et nisi ac, hendrerit venenatis
                 libero. Donec consectetur faucibus ipsum id gravida.
               </p>
-              <button>Learn More</button>
+              <button class="btn-primary">Learn More</button>
             </div>
           </div>
         </section>
@@ -209,7 +241,7 @@
         <section class="customers">
           <div class="customers_container">
             <div class="customers_image">
-              <img src="./assets/images/customers.avif" alt="customers" />
+              <img src="./assets/images/customers.avif" alt="Tim Smith" />
             </div>
             <div class="customers_content">
               <p>
@@ -225,42 +257,25 @@
                 eget efficitur libero condimentum id. Curabitur id nibh id sem
                 dignissim finibus ac sit amet magna.
               </p>
-              <div>
+              <div class="customer_info">
                 <h3>Tim Smith</h3>
                 <span>British Dragon Boat Racing Association</span>
               </div>
-
               <div class="content_icons">
                 <div class="icons">
-                  <img
-                    src="./assets/logo/client_logo1.png"
-                    alt="client_logo1"
-                  />
-                  <img
-                    src="./assets/logo/client_logo2.png"
-                    alt="client_logo2"
-                  />
-                  <img
-                    src="./assets/logo/client_logo3.png"
-                    alt="client_logo3"
-                  />
-                  <img
-                    src="./assets/logo/client_logo4.png"
-                    alt="client_logo4"
-                  />
-                  <img
-                    src="./assets/logo/client_logo5.png"
-                    alt="client_logo5"
-                  />
-                  <img
-                    src="./assets/logo/client_logo6.png"
-                    alt="client_logo6"
-                  />
+                  <img src="./assets/logo/client_logo1.png" alt="Client logo 1" />
+                  <img src="./assets/logo/client_logo2.png" alt="Client logo 2" />
+                  <img src="./assets/logo/client_logo3.png" alt="Client logo 3" />
+                  <img src="./assets/logo/client_logo4.png" alt="Client logo 4" />
+                  <img src="./assets/logo/client_logo5.png" alt="Client logo 5" />
+                  <img src="./assets/logo/client_logo6.png" alt="Client logo 6" />
                 </div>
-                <div class="cta">
-                  <p>Meet      customers</p>
-                  <img src="./assets/icons/Down.png" alt="right_arrow">
-                </div>
+                <a href="#" class="link-cta">
+                  Meet customers
+                  <svg class="icon-arrow" viewBox="0 0 16 16" fill="none" aria-hidden="true">
+                    <path d="M3 8h10M10 5l3 3-3 3" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+                  </svg>
+                </a>
               </div>
             </div>
           </div>
@@ -270,55 +285,71 @@
           <div class="community_updates_container">
             <div class="content">
               <h2>Caring is the new marketing</h2>
-              <p>The Nextcent blog is the best place to read about the latest membership insights, trends and more. See who's joining the community, read about how our community are increasing their membership income and lot's more.​</p>
+              <p>
+                The Nextcent blog is the best place to read about the latest
+                membership insights, trends and more. See who's joining the
+                community, read about how our community are increasing their
+                membership income and lot's more.
+              </p>
             </div>
             <div class="cards_grid">
-              <div class="grid_card">
-                <img src="./assets/images/card_image1.avif" alt="grid_card1" />
-
-                <div>
-                  <p>Creating Streamlined Safeguarding Processes with OneRen</p>
-                  <div>
-                    <button>Readmore</button>
-                    <img src="./assets/icons/Down.png" alt="down" />
+              <article class="grid_card">
+                <div class="grid_card_image">
+                  <img src="./assets/images/card_image1.avif" alt="Blog post 1" />
+                  <div class="grid_card_body">
+                    <p>Creating Streamlined Safeguarding Processes with OneRen</p>
+                    <a href="#" class="link-cta">
+                      Readmore
+                      <svg class="icon-arrow" viewBox="0 0 16 16" fill="none" aria-hidden="true">
+                        <path d="M3 8h10M10 5l3 3-3 3" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+                      </svg>
+                    </a>
                   </div>
                 </div>
-              </div>
-              <div class="grid_card">
-            <img src="./assets/images/card_image2.avif" alt="grid_card2" />
-
-
-                <div>
-                  <p>What are your safeguarding responsibilities and how can you manage them?</p>
-                  <div>
-                    <button>Readmore</button>
-                    <img src="./assets/icons/Down.png" alt="down" />
+              </article>
+              <article class="grid_card">
+                <div class="grid_card_image">
+                  <img src="./assets/images/card_image2.avif" alt="Blog post 2" />
+                  <div class="grid_card_body">
+                    <p>What are your safeguarding responsibilities and how can you manage them?</p>
+                    <a href="#" class="link-cta">
+                      Readmore
+                      <svg class="icon-arrow" viewBox="0 0 16 16" fill="none" aria-hidden="true">
+                        <path d="M3 8h10M10 5l3 3-3 3" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+                      </svg>
+                    </a>
                   </div>
                 </div>
-              </div>
-
-              <div class="grid_card">
-        <img src="./assets/images/card_image3.avif" alt="grid_card3" />
-
-
-                <div>
-                  <p>Revamping the Membership Model with Triathlon Australia</p>
-                 <div>
-                    <button>Readmore</button>
-                    <img src="./assets/icons/Down.png" alt="down" />
+              </article>
+              <article class="grid_card">
+                <div class="grid_card_image">
+                  <img src="./assets/images/card_image3.avif" alt="Blog post 3" />
+                  <div class="grid_card_body">
+                    <p>Revamping the Membership Model with Triathlon Australia</p>
+                    <a href="#" class="link-cta">
+                      Readmore
+                      <svg class="icon-arrow" viewBox="0 0 16 16" fill="none" aria-hidden="true">
+                        <path d="M3 8h10M10 5l3 3-3 3" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+                      </svg>
+                    </a>
                   </div>
                 </div>
-              </div>
+              </article>
             </div>
           </div>
         </section>
       </section>
+
       <section class="final_cta">
         <div class="cta_container">
           <h2>Pellentesque suscipit fringilla libero eu.</h2>
-          <div>
-            <button>Get a Demo</button>
-            <img src="./assets/icons/Down.png" alt="down" />
+          <div class="cta_btn_group">
+            <button class="btn-primary">
+              Get a Demo
+              <svg class="icon-arrow icon-arrow--sm" viewBox="0 0 16 16" fill="none" aria-hidden="true">
+                <path d="M3 8h10M10 5l3 3-3 3" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+              </svg>
+            </button>
           </div>
         </div>
       </section>
@@ -326,15 +357,15 @@
 
     <footer>
       <div class="footer_container">
-        <div class="comapny_info">
-          <img src="./assets/logo/Logo.png" alt="footer_logo">   logo
+        <div class="company_info">
+          <img src="./assets/logo/Logo.png" alt="Nexcent logo" class="footer-logo" />
           <p>Copyright © 2020 Landify UI Kit.</p>
           <span>All rights reserved</span>
           <div class="social_icons">
-            <img src="./assets/icons/social1.png" alt="social1" />
-            <img src="./assets/icons/social2.png" alt="social2" />
-            <img src="./assets/icons/social3.png" alt="social3" />
-            <img src="./assets/icons/social4.png" alt="social4" />
+            <img src="./assets/icons/social1.png" alt="Instagram" />
+            <img src="./assets/icons/social2.png" alt="Dribbble" />
+            <img src="./assets/icons/social3.png" alt="Twitter" />
+            <img src="./assets/icons/social4.png" alt="YouTube" />
           </div>
         </div>
 
@@ -342,28 +373,28 @@
           <div class="link_item">
             <h3>Company</h3>
             <ul>
-              <li>About us</li>
-              <li>Blog</li>
-              <li>Contact us</li>
-              <li>Pricing</li>
-              <li>Testimonials</li>
+              <li><a href="#">About us</a></li>
+              <li><a href="#">Blog</a></li>
+              <li><a href="#">Contact us</a></li>
+              <li><a href="#">Pricing</a></li>
+              <li><a href="#">Testimonials</a></li>
             </ul>
           </div>
           <div class="link_item">
             <h3>Support</h3>
-            <ul> 
-              <li>Help center</li>
-              <li>Terms of service</li>
-              <li>Legal</li>
-              <li>Privacy policy</li>
-              <li>Status</li>
+            <ul>
+              <li><a href="#">Help center</a></li>
+              <li><a href="#">Terms of service</a></li>
+              <li><a href="#">Legal</a></li>
+              <li><a href="#">Privacy policy</a></li>
+              <li><a href="#">Status</a></li>
             </ul>
           </div>
-          <div>
+          <div class="newsletter">
             <h3>Stay up to date</h3>
-            <div>
-              <input type="text" placeholder="Your email address"/>
-              <img src="./assets/icons/Vector.png" alt="arrow " />
+            <div class="email_input">
+              <input type="email" placeholder="Your email address" />
+              <img src="./assets/icons/Vector.png" alt="Send" />
             </div>
           </div>
         </div>
