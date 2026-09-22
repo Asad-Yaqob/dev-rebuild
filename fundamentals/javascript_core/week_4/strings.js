@@ -2,7 +2,8 @@ const userName = new String("AsadYaqoob");
 userName.anchor("hello"); // .anchor is deprecated it wraps the string with html element anchor tag with name attribute with the passed value in anchor("value").
 // console.log(userName);
 
-const sentence = "The quick brown fox jumps over the lazy dog."; // this method returns the charcter at specified position mentioned in .at(0) it can be positive and negative. negative will start from the backword.
+const sentence = "The quick brown fox jumps over the lazy dog."; // this method returns the charcter at specified position
+//  mentioned in .at(0) it can be positive and negative. negative will start from the backword.
 // console.log(sentence.at(-2));
 
 const str = "To be, or not to be, that is the question.";
