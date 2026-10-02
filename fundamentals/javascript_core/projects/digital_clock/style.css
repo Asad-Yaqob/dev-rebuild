@@ -1,0 +1,56 @@
+/* Base Layout */
+body {
+    background-color: #212121;
+    color: #fff;
+    margin: 0;
+    padding: 0;
+    font-family: sans-serif;
+}
+
+/* Navigation Bar */
+nav {
+    display: flex;
+    justify-content: flex-start;
+    gap: 10px;
+    padding: 10px;
+    background-color: #ffffff;
+}
+
+nav a {
+    background-color: #fff;
+    padding: 10px 30px;
+    border-radius: 8px;
+    color: #212121;
+    text-decoration: none;
+    border: 2px solid #212121;
+    font-weight: bold;
+}
+
+/* Centered Clock Layout */
+.center {
+    display: flex;
+    height: 100vh;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+
+#banner {
+    font-size: 1.2rem;
+    margin-bottom: 10px;
+}
+
+/* Clock Display Box */
+#clock {
+    width: 150px;
+    height: 40px;
+    border-radius: 10px;
+    background-color: #e38900;
+    padding: 10px 20px;
+    font-size: 25px;
+    font-weight: bold;
+    color: #000;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
